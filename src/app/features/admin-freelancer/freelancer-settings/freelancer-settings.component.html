@@ -1,0 +1,32 @@
+<div class="pro-pos">
+    <nav class="user-tabs mb-4">
+        <ul class="nav nav-tabs nav-tabs-bottom nav-justified">
+            <li class="nav-item">
+                <a class="nav-link"
+                   [routerLink]="[RouteName.Base, RouteName.Freelancer, RouteName.Settings, RouteName.Profile]"
+                   routerLinkActive="active"
+                >
+                    Profile Settings
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link"
+                   [routerLink]="[RouteName.Base, RouteName.Freelancer, RouteName.Settings, RouteName.ChangePassword]"
+                   routerLinkActive="active"
+                >
+                    Change Password
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link"
+                   [routerLink]="[RouteName.Base, RouteName.Freelancer, RouteName.Settings, RouteName.DeleteAccount]"
+                   routerLinkActive="active"
+                >
+                    Delete Account
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <router-outlet></router-outlet>
+</div>

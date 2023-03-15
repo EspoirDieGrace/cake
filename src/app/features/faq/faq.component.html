@@ -1,0 +1,301 @@
+<ng-container *transloco="let t; read: 'faq'">
+    <!-- Breadcrumb -->
+    <div class="breadcrumb-bar">
+        <div class="container">
+            <div class="row align-items-center inner-banner">
+                <div class="col-md-12 col-12 text-center">
+                    <h2 class="breadcrumb-title">FAQ</h2>
+                    <nav aria-label="breadcrumb" class="page-breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a [routerLink]="[RouteName.Base]">{{'header.home' | transloco}}</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">FAQ</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /Breadcrumb -->
+
+    <!-- Page Content -->
+    <div class="content">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <!-- FAQ Content -->
+                    <div class="faq p-0">
+                        <div id="accordion">
+
+                            <!-- Freelancer FAQ Content -->
+                            <div class="basics-faq">
+                                <h4>{{t('freelancer.title')}}</h4>
+
+                                <!-- FAQ Content -->
+                                <div class="card">
+                                    <a class="card-link" data-bs-toggle="collapse" href="#collapseOne">
+                                        <div class="card-header">
+                                            {{t('freelancer.how-does-it-work.title')}} <i class="fa fa-angle-right"></i>
+                                        </div>
+                                    </a>
+                                    <div id="collapseOne" class="collapse" data-parent="#accordion">
+                                        <div class="card-body">
+                                            <p>{{t('freelancer.how-does-it-work.text-1')}}</p>
+                                            <p>{{t('freelancer.how-does-it-work.text-2')}}</p>
+                                            <p>{{t('freelancer.how-does-it-work.text-3')}}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- /FAQ Content -->
+
+                                <!-- FAQ Content -->
+                                <div class="card">
+                                    <a class="collapsed card-link" data-bs-toggle="collapse" href="#collapseTwo">
+                                        <div class="card-header">
+                                            {{t('freelancer.how-to-create-an-account.title')}} <i class="fa fa-angle-right"></i>
+                                        </div>
+                                    </a>
+                                    <div id="collapseTwo" class="collapse" data-parent="#accordion">
+                                        <div class="card-body">
+                                            <dl>
+                                                <dd><fa-icon [icon]="faCircleCheck"></fa-icon>  {{t('freelancer.how-to-create-an-account.text-1')}}</dd>
+                                                <dd><fa-icon [icon]="faCircleCheck"></fa-icon>  {{t('freelancer.how-to-create-an-account.text-2')}}</dd>
+                                                <dd><fa-icon [icon]="faCircleCheck"></fa-icon>  {{t('freelancer.how-to-create-an-account.text-3')}}</dd>
+                                            </dl>
+                                            <p>{{t('freelancer.how-to-create-an-account.text-4')}}</p>
+                                            <p>{{t('freelancer.how-to-create-an-account.text-5')}}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- /FAQ Content -->
+
+                                <!-- FAQ Content -->
+                                <div class="card">
+                                    <a class="collapsed card-link" data-bs-toggle="collapse" href="#collapseThree">
+                                        <div class="card-header">
+                                            {{t('freelancer.how-to-post-an-offer.title')}} <i class="fa fa-angle-right"></i>
+                                        </div>
+                                    </a>
+
+                                    <div id="collapseThree" class="collapse" data-parent="#accordion">
+                                        <div class="card-body">
+                                            <p>{{t('freelancer.how-to-post-an-offer.text-1')}}</p>
+
+                                            <dl>
+                                                <dd><fa-icon [icon]="faCircleCheck"></fa-icon>  {{t('freelancer.how-to-post-an-offer.text-2')}}</dd>
+                                                <dd><fa-icon [icon]="faCircleCheck"></fa-icon>  {{t('freelancer.how-to-post-an-offer.text-3')}}</dd>
+                                                <dd><fa-icon [icon]="faCircleCheck"></fa-icon>  {{t('freelancer.how-to-post-an-offer.text-4')}}</dd>
+                                            </dl>
+
+                                            <p>{{t('freelancer.how-to-post-an-offer.text-5')}}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- /FAQ Content -->
+
+                                <!-- FAQ Content -->
+                                <div class="card">
+                                    <a class="collapsed card-link" data-bs-toggle="collapse" href="#collapsefour">
+                                        <div class="card-header">
+                                            {{t('freelancer.how-to-select-a-profile-for-a-mission.title')}} <i class="fa fa-angle-right"></i>
+                                        </div>
+                                    </a>
+                                    <div id="collapsefour" class="collapse" data-parent="#accordion">
+                                        <div class="card-body">
+                                            <p>{{t('freelancer.how-to-select-a-profile-for-a-mission.text-1')}}</p>
+                                            <p>{{t('freelancer.how-to-select-a-profile-for-a-mission.text-2')}}</p>
+                                            <p>{{t('freelancer.how-to-select-a-profile-for-a-mission.text-3')}}</p>
+
+                                            <dl>
+                                                <dd><fa-icon [icon]="faCircleCheck"></fa-icon>  {{t('freelancer.how-to-select-a-profile-for-a-mission.text-4')}}</dd>
+                                                <dd><fa-icon [icon]="faCircleCheck"></fa-icon>  {{t('freelancer.how-to-select-a-profile-for-a-mission.text-5')}}</dd>
+                                                <dd><fa-icon [icon]="faCircleCheck"></fa-icon>  {{t('freelancer.how-to-select-a-profile-for-a-mission.text-6')}}</dd>
+                                            </dl>
+
+                                            <p>{{t('freelancer.how-to-select-a-profile-for-a-mission.text-7')}}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- /FAQ Content -->
+
+                                <!-- FAQ Content -->
+                                <div class="card">
+                                    <a class="collapsed card-link" data-bs-toggle="collapse" href="#collapsefive">
+                                        <div class="card-header">
+                                            {{t('freelancer.how-to-make-a-payment.title')}} <i class="fa fa-angle-right"></i>
+                                        </div>
+                                    </a>
+                                    <div id="collapsefive" class="collapse" data-parent="#accordion">
+                                        <div class="card-body">
+                                            <p>{{t('freelancer.how-to-make-a-payment.text-1')}}</p>
+
+                                            <dl>
+                                                <dd><fa-icon [icon]="faCircleCheck"></fa-icon>  {{t('freelancer.how-to-make-a-payment.text-2')}}</dd>
+                                                <dd><fa-icon [icon]="faCircleCheck"></fa-icon>  {{t('freelancer.how-to-make-a-payment.text-3')}}</dd>
+                                                <dd><fa-icon [icon]="faCircleCheck"></fa-icon>  {{t('freelancer.how-to-make-a-payment.text-4')}}</dd>
+                                            </dl>
+
+                                            <p>{{t('freelancer.how-to-make-a-payment.text-5')}}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- /FAQ Content -->
+
+                                <!-- FAQ Content -->
+                                <div class="card">
+                                    <a class="collapsed card-link" data-bs-toggle="collapse" href="#collapsesix">
+                                        <div class="card-header">
+                                            {{t('freelancer.difference-between-basic-and-verified-profile.title')}} <i class="fa fa-angle-right"></i>
+                                        </div>
+                                    </a>
+                                    <div id="collapsesix" class="collapse" data-parent="#accordion">
+                                        <div class="card-body">
+                                            <p>{{t('freelancer.difference-between-basic-and-verified-profile.text-1')}}</p>
+                                            <p>{{t('freelancer.difference-between-basic-and-verified-profile.text-2')}}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- /FAQ Content -->
+                            </div>
+                            <!-- /Freelancer FAQ Content -->
+
+                            <!-- Job FAQ Content -->
+                            <div class="basics-faq">
+                                <h4>{{t('job.title')}}</h4>
+
+                                <div class="card">
+                                    <a class="card-link" data-bs-toggle="collapse" href="#accOne">
+                                        <div class="card-header">
+                                            {{t('job.how-does-it-work.title')}} <i class="fa fa-angle-right"></i>
+                                        </div>
+                                    </a>
+                                    <div id="accOne" class="collapse" data-parent="#accordion">
+                                        <div class="card-body">
+                                            <p>{{t('job.how-does-it-work.text-1')}}</p>
+                                            <p>{{t('job.how-does-it-work.text-2')}}</p>
+                                            <p>{{t('job.how-does-it-work.text-3')}}</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="card">
+                                    <a class="collapsed card-link" data-bs-toggle="collapse" href="#accTwo">
+                                        <div class="card-header">
+                                            {{t('job.how-to-create-an-account.title')}} <i class="fa fa-angle-right"></i>
+                                        </div>
+                                    </a>
+                                    <div id="accTwo" class="collapse" data-parent="#accordion">
+                                        <div class="card-body">
+                                            <dl>
+                                                <dd><fa-icon [icon]="faCircleCheck"></fa-icon>  {{t('job.how-to-create-an-account.text-1')}}</dd>
+                                                <dd><fa-icon [icon]="faCircleCheck"></fa-icon>  {{t('job.how-to-create-an-account.text-2')}}</dd>
+                                                <dd><fa-icon [icon]="faCircleCheck"></fa-icon>  {{t('job.how-to-create-an-account.text-3')}}</dd>
+                                            </dl>
+
+                                            <p>{{t('job.how-to-create-an-account.text-4')}}</p>
+                                            <p>{{t('job.how-to-create-an-account.text-5')}}</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="card">
+                                    <a class="collapsed card-link" data-bs-toggle="collapse" href="#accThree">
+                                        <div class="card-header">
+                                            {{t('job.how-to-sell-a-service.title')}} <i class="fa fa-angle-right"></i>
+                                        </div>
+                                    </a>
+                                    <div id="accThree" class="collapse" data-parent="#accordion">
+                                        <div class="card-body">
+                                            <p>{{t('job.how-to-sell-a-service.text-1')}}</p>
+
+                                            <dl>
+                                                <dd><fa-icon [icon]="faCircleCheck"></fa-icon>  {{t('job.how-to-sell-a-service.text-1')}}</dd>
+                                                <dd><fa-icon [icon]="faCircleCheck"></fa-icon>  {{t('job.how-to-sell-a-service.text-2')}}</dd>
+                                                <dd><fa-icon [icon]="faCircleCheck"></fa-icon>  {{t('job.how-to-sell-a-service.text-3')}}</dd>
+                                                <dd><fa-icon [icon]="faCircleCheck"></fa-icon>  {{t('job.how-to-sell-a-service.text-4')}}</dd>
+                                            </dl>
+
+                                            <p>{{t('job.how-to-sell-a-service.text-5')}}</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="card">
+                                    <a class="collapsed card-link" data-bs-toggle="collapse" href="#accFour">
+                                        <div class="card-header">
+                                            {{t('job.how-to-respond-to-a-published-offer.title')}} <i class="fa fa-angle-right"></i>
+                                        </div>
+                                    </a>
+                                    <div id="accFour" class="collapse" data-parent="#accordion">
+                                        <div class="card-body">
+                                            <p>{{t('job.how-to-respond-to-a-published-offer.text-1')}}</p>
+                                            <p>{{t('job.how-to-respond-to-a-published-offer.text-2')}}</p>
+                                            <p>{{t('job.how-to-respond-to-a-published-offer.text-3')}}</p>
+
+                                            <dl>
+                                                <dd><fa-icon [icon]="faCircleCheck"></fa-icon>  {{t('job.how-to-respond-to-a-published-offer.text-4')}}</dd>
+                                                <dd><fa-icon [icon]="faCircleCheck"></fa-icon>  {{t('job.how-to-respond-to-a-published-offer.text-5')}}</dd>
+                                                <dd><fa-icon [icon]="faCircleCheck"></fa-icon>  {{t('job.how-to-respond-to-a-published-offer.text-6')}}</dd>
+                                            </dl>
+
+                                            <p>{{t('job.how-to-respond-to-a-published-offer.text-7')}}</p>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="card">
+                                    <a class="collapsed card-link" data-bs-toggle="collapse" href="#accFive">
+                                        <div class="card-header">
+                                            {{t('job.how-to-receive-a-payment.title')}} <i class="fa fa-angle-right"></i>
+                                        </div>
+                                    </a>
+                                    <div id="accFive" class="collapse" data-parent="#accordion">
+                                        <div class="card-body">
+                                            <p>{{t('job.how-to-receive-a-payment.text-1')}}</p>
+
+                                            <dl>
+                                                <dd><fa-icon [icon]="faCircleCheck"></fa-icon>  {{t('job.how-to-receive-a-payment.text-2')}}</dd>
+                                                <dd><fa-icon [icon]="faCircleCheck"></fa-icon>  {{t('job.how-to-receive-a-payment.text-3')}}</dd>
+                                            </dl>
+
+                                            <p>{{t('job.how-to-receive-a-payment.text-4')}}</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="card">
+                                    <a class="collapsed card-link" data-bs-toggle="collapse" href="#accSix">
+                                        <div class="card-header">
+                                            {{t('job.difference-between-basic-and-verified-profile.title')}} <i class="fa fa-angle-right"></i>
+                                        </div>
+                                    </a>
+                                    <div id="accSix" class="collapse" data-parent="#accordion">
+                                        <div class="card-body">
+                                            <p>{{t('job.difference-between-basic-and-verified-profile.text-1')}}</p>
+                                            <p>{{t('job.difference-between-basic-and-verified-profile.text-2')}}</p>
+
+                                            <dl>
+                                                <dd><fa-icon [icon]="faCircleCheck"></fa-icon>  {{t('job.difference-between-basic-and-verified-profile.text-3')}}</dd>
+                                                <dd><fa-icon [icon]="faCircleCheck"></fa-icon>  {{t('job.difference-between-basic-and-verified-profile.text-4')}}</dd>
+                                                <dd><fa-icon [icon]="faCircleCheck"></fa-icon>  {{t('job.difference-between-basic-and-verified-profile.text-5')}}</dd>
+                                            </dl>
+
+                                            <p>{{t('job.difference-between-basic-and-verified-profile.text-6')}}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /Job FAQ Content -->
+                        </div>
+                    </div>
+                    <!-- /FAQ Content -->
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    <!-- /Page Content -->
+</ng-container>
+

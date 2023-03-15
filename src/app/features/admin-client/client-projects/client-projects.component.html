@@ -1,0 +1,52 @@
+<div class="row">
+    <div class="col-md-12 text-end">
+        <a [routerLink] = "[RouteName.Base, RouteName.Client, RouteName.Projects, RouteName.Post]" class="btn btn-primary back-btn mb-4">Post a Project</a>
+    </div>
+</div>
+
+<nav class="user-tabs mb-4">
+    <ul class="nav nav-tabs nav-tabs-bottom nav-justified">
+        <li class="nav-item">
+            <a class="nav-link"
+               [routerLink]="[RouteName.Base, RouteName.Client, RouteName.Projects, RouteName.All]"
+               routerLinkActive="active"
+            >
+                All Projects
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link"
+               [routerLink]="[RouteName.Base, RouteName.Client, RouteName.Projects, RouteName.Pending]"
+               routerLinkActive="active"
+            >
+                Pending Projects
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link"
+               [routerLink]="[RouteName.Base, RouteName.Client, RouteName.Projects, RouteName.Ongoing]"
+               routerLinkActive="active"
+            >
+                Ongoing Projects
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link"
+               [routerLink]="[RouteName.Base, RouteName.Client, RouteName.Projects, RouteName.Completed]"
+               routerLinkActive="active"
+            >
+                Completed Projects
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link"
+               [routerLink]="[RouteName.Base, RouteName.Client, RouteName.Projects, RouteName.Cancelled]"
+               routerLinkActive="active"
+            >
+                Cancelled Projects
+            </a>
+        </li>
+    </ul>
+</nav>
+
+<router-outlet></router-outlet>

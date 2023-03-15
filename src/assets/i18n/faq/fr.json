@@ -1,0 +1,101 @@
+{
+    "freelancer": {
+        "title": "Je recherche un talent",
+        "how-does-it-work": {
+            "title": "Comment ça marche ?",
+            "text-1": "Vous recherchez des talents pour développer vos projets ? VINOCT est une plateforme simple et sécurisée qui vous met en relation avec les compétences dont vous avez besoin.",
+            "text-2": "Les transactions sont sécurisées et vous avez le choix entre plusieurs services et offres de prix.",
+            "text-3": "Pour trouver un talent ou un service sur VINOCT, commencez par vous inscrire."
+        },
+        "how-to-create-an-account": {
+            "title": "Comment créer son profil professionnel ?",
+            "text-1": "Remplissez le formulaire de création de compte",
+            "text-2": "Validez votre inscription pour recevoir un mail de confirmation",
+            "text-3": "Accédez ensuite à votre espace professionnel et ajoutez les informations relatives à votre entreprise",
+            "text-4": "Après vous être inscrit, mettez à jour les informations de votre entreprise afin d’attirer les talents et de renvoyer une bonne image de votre entreprise.",
+            "text-5": "Une fois fait, vous avez le choix entre publier une offre ou sélectionner le profil qui vous correspond."
+        },
+        "how-to-post-an-offer": {
+            "title": "Comment publier une offre ?",
+            "text-1": "Vous recherchez en service en particulier pour votre entreprise ? Avez-vous besoin d’une compétence bien précise pour avancer sur votre projet ? Publiez une offre et attirez les talents qu’il vous faut.",
+            "text-2": "À partir de votre espace professionnel, cliquez sur 'publiez une offre'",
+            "text-3": "Remplissez le formulaire avec tous les détails concernant votre projet ainsi que les compétences dont vous aurez besoin",
+            "text-4": "Soumettez votre offre",
+            "text-5": "Une fois publiée, votre offre est automatiquement visible par les free-lances après approbation de VINOCT."
+        },
+        "how-to-select-a-profile-for-a-mission": {
+            "title": "Comment sélectionner un profil pour une mission ?",
+            "text-1": "Sur VINOCT, vous avez le choix entre sélectionner un profil qui vous correspond ou publier une offre de mission.",
+            "text-2": "De nombreux profils issus de divers domaines sont enregistrés sur la plateforme. Vous avez la possibilité d’utiliser différents filtres afin d’affiner votre recherche.",
+            "text-3": "Pour trouver le profil qui vous correspond, connectez-vous à votre compte professionnel.",
+            "text-4": "À partir de votre espace professionnel, cliquez sur 'trouver un freelance'",
+            "text-5": "Choisissez le profil qui vous intéresse en vous basant sur les services proposés, le coût et le temps d’exécution de la mission",
+            "text-6": " Engagez le freelance qui vous convient",
+            "text-7": "Pour vous permettre de faire le bon choix, VINOCT vous donne la possibilité de converser avec un freelance avant de l’engager. Cela vous permettra de vous rassurer quant au choix du profil."
+        },
+        "how-to-make-a-payment": {
+            "title": "Comment effectuer un paiement ?",
+            "text-1": "Vous avez trouvé le profil qui vous correspond ? Avant que le freelance commence la mission attribuée, vous allez devoir effectuer un paiement. Les modalités de paiements sont fixées par les freelance au moment de la publication de leur services.",
+            "text-2": "Choisissez le mode de paiement qui vous convient",
+            "text-3": "Entrez vos coordonnées",
+            "text-4": "Validez le paiement",
+            "text-5": "Les transactions sont sécurisées sur Vinoct et les freelances ne reçoivent le paiement qu’après réalisation de la mission."
+        },
+        "difference-between-basic-and-verified-profile": {
+            "title": "Quelle est la différence entre un profil basique et un profil vérifié ?",
+            "text-1": "Chez VINOCT, nous faisons toujours de notre mieux pour assurer la sécurité de tous dans notre communauté. Après création d’un compte, les freelances ont la possibilité d’obtenir un badge pro lorsqu’ils nous soumettent des documents qui permettent de vérifier leur identité et qui prouvent leur expertise.",
+            "text-2": "Travailler avec des comptes pro, c’est travailler avec des profils vérifiés et approuvés par VINOCT."
+        }
+    },
+    "job": {
+        "title": "Je propose mes talents",
+        "how-does-it-work": {
+            "title": "Comment ça marche ?",
+            "text-1": "Vous recherchez des missions qui vous permettront de vendre vos compétences ? VINOCT est une plateforme simple et sécurisée qui vous met en relation avec des entreprises et entrepreneurs à la recherche de compétences telles que les vôtres.",
+            "text-2": "Les transactions sont sécurisées et vous avez le choix entre plusieurs offres.",
+            "text-3": "Pour trouver une offre ou un vendre un service sur VINOCT, commencez par vous inscrire."
+        },
+        "how-to-create-an-account": {
+            "title": "Comment créer son profil freelance ?",
+            "text-1": "Remplissez le formulaire de création de compte",
+            "text-2": "Validez votre inscription pour recevoir un mail de confirmation",
+            "text-3": "Accédez ensuite à votre espace personnel",
+            "text-4": "Après vous être inscrit, mettez à jour les informations de votre profil freelance afin d’attirer les entreprises et de renvoyer une bonne image de vous.",
+            "text-5": "Une fois fait, vous avez le choix entre publier des services ou répondre aux offres qui vous correspondent."
+        },
+        "how-to-sell-a-service": {
+            "title": "Comment vendre un service ?",
+            "text-1": "Vous souhaitez vendre vos compétences sur VINOCT ? Publiez vos services et attirez les entreprises qu’il vous faut.",
+            "text-2": "À partir de votre espace professionnel, cliquez sur 'Mes propositions' et sur 'Soumettre une proposition'",
+            "text-3": "Remplissez le formulaire avec tous les détails concernant votre service ainsi que les modalités de paiement et le temps de travail",
+            "text-4": "Soumettez votre proposition",
+            "text-5": "Une fois publiée, votre proposition est automatiquement visible par les entreprises après approbation de VINOCT."
+        },
+        "how-to-respond-to-a-published-offer": {
+            "title": "Comment répondre à une offre publiée par une entreprise ?",
+            "text-1": "Sur VINOCT, vous avez le choix entre répondre à l’offre d’un client ou publier un service.",
+            "text-2": "De nombreuses offres de divers domaines sont publiées sur la plateforme. Vous avez la possibilité d’utiliser différents filtres afin d’affiner votre recherche.",
+            "text-3": "Pour trouver l’offre qui vous correspond, connectez-vous à votre compte freelance.",
+            "text-4": "À partir de votre espace personnel, cliquez sur ''Trouver une mission”",
+            "text-5": "Choisissez la mission qui vous intéresse en vous basant sur l’offre proposée",
+            "text-6": "Répondez à l’offre et envoyez votre propositio",
+            "text-7": "Pour vous permettre de faire le bon choix, VINOCT vous donne la possibilité de converser avec le client avant de répondre à son offre. Cela vous permettra de vous rassurer quant au choix de la mission."
+        },
+        "how-to-receive-a-payment": {
+            "title": "Comment recevoir un paiement ?",
+            "text-1": "Vous avez trouvé la mission qui vous correspond ? Avant de commencer le travail à effectuer, votre client devra effectuer un paiement selon les modalités que vous avez fixées au moment de la soumission de votre offre. Pour recevoir un paiement, vous devez :",
+            "text-2": "Indiquer vos coordonnées bancaires ou téléphoniques sur votre profil",
+            "text-3": "Terminer et soumettre votre travail au client",
+            "text-4": "Vous ne recevrez le paiement qu’après réalisation et soumission du travail demandé par le client."
+        },
+        "difference-between-basic-and-verified-profile": {
+            "title": "Quelle est la différence entre un profil basique et un profil vérifié ?",
+            "text-1": "Chez VINOCT, nous faisons toujours de notre mieux pour assurer la sécurité de tous dans notre communauté. Après création de votre compte personnel, vous avez la possibilité d’obtenir un badge pro en nous soumettant des documents qui permettent de vérifier votre identité et de prouver votre expertise.",
+            "text-2": "Pour le faire :",
+            "text-3": "Rendez-vous sur votre profil personnel",
+            "text-4": "Cliquez sur 'Attestation'",
+            "text-5": "Soumettez le ou les documents demandés",
+            "text-6": "Avoir un compte pro, c’est gagner la confiance de vos clients en leur montrant que vous avez été approuvé par VINOCT."
+        }
+    }
+}

@@ -1,0 +1,167 @@
+<p>bonjour</p>
+
+<div class="account-content setting-content">
+    <div class="pro-card">
+        <div class="pro-head">
+            <h3 class="pro-title without-border mb-0">Ajouter un Projet</h3>
+        </div>
+        <div class="pro-body">
+            <div class="row">
+                <div class="col-md-8">
+                    <!-- form -->
+                    <form  [formGroup]='job' novalidate>
+                        <div class="form-group">
+                            <label>Titre du Job</label>
+                            <input type="text" class="form-control floating" name="jobtitle" id="jobtitle" formControlName="jobtitle">
+                           
+                        </div>
+
+                        <div class="form-group">
+                                <select  class="form-select" aria-label="Default select example" formControlName="category">
+                                    <option  value="" selected>Categorie</option> 
+                                    <option  *ngFor="let i of catIndex" value ={{i.index}} >{{i.name}}</option>
+                                    <!-- <option value="manioc" name="category" >manioc</option>
+                                    <option value="aubergine" name="category">aubergine</option> -->
+                                </select>
+                         </div>
+
+                         <div class="form-group">
+                            <select  class="form-select" aria-label="Default select example" formControlName="subcategory">
+                                <option  value="" selected>Sous Categorie</option> 
+                                <option  *ngFor="let i of catIndex" value ={{i.index}} >{{i.name}}</option>
+                                <!-- <option value="manioc" name="category" >manioc</option>
+                                <option value="aubergine" name="category">aubergine</option> -->
+                            </select>
+                     </div>
+
+                     <div class="form-group">
+                            <label>Brief du Projet</label>
+                            <textarea class="form-control floating" id="jobdescription" formControlName="jobdescription"></textarea>
+                     </div>
+                     <div class="form-group">
+                            <label>Joindre un fichier</label>
+                            <input type="file" class="form-control" formcontrolName="attachments">
+                     </div>
+
+                   
+
+
+                      <div class="form-group">
+                            <select  class="form-select" aria-label="Default select example" formControlName="city">
+                                <option  value="" selected>City</option> 
+                                <option *ngFor="let i of cities" value ={{i.index}} >{{i.name}}</option>
+                                <!-- <option value="manioc" name="category" >manioc</option>
+                                <option value="aubergine" name="category">aubergine</option> -->
+                            </select>
+                     </div>
+
+                      <div class="form-group">
+                            <select  class="form-select" aria-label="Default select example" formControlName="employementType">
+                                <option  value="" selected>Type de Contrat</option> 
+                                <option   *ngFor="let i of employment_type" value ={{i.index}} >{{i.name}}</option>
+                                <!-- <option value="manioc" name="category" >manioc</option>
+                                <option value="aubergine" name="category">aubergine</option> -->
+                            </select>
+                     </div>
+
+   <div class="col-md-12 col-xl-8" formArrayName = "jobskills">
+                <div class="card">
+                    <div class="pro-head">
+                        <h3 class="pro-title without-border mb-0">Competences souhaitées</h3>
+                        <button class="btn fund-btn add-award" (click)="addJobSkill()">Ajouter</button>
+                    </div>
+                    <div class="pro-body  award-info" >
+                        <div class="form-row align-items-center award-cont" *ngFor="let jobskill of jobskills.controls; let i=index">
+                            <div class="form-group col-md-10">
+                                <input type="text" class="form-control" id="jobskill-{{ i }}"  [formControlName]='i'>
+                            </div>
+                            <div class="form-group col-md-2">
+                                <button  class="btn trash-icon" (click) = rmvJbsk()><i class="far fa-trash-alt"></i></button>
+                            </div>
+                        </div>
+                   
+                    </div>
+                </div>
+
+          
+            </div>
+
+
+                     
+
+                        <div class="form-group">
+                            <label>Délai</label>
+                            <div class="d-flex justify-content-between">
+                        
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="timeline" id="24heures" value="24" formControlName="timeline" checked >
+                                    <label class="form-check-label" for="flexRadioDefault1">
+                                    24 heures
+                                    </label>
+                                </div>
+    
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="timeline" id="3jours" value="3" formControlName="timeline">
+                                    <label class="form-check-label" for="flexRadioDefault2">
+                                   3 jours
+                                    </label>
+                                </div>
+    
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="timeline" id="7jours" value="7" formcontrolName="timeline">
+                                    <label class="form-check-label" for="flexRadioDefault3">
+                                     7 jours
+                                    </label>
+                                </div>
+    
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="timeline" id="Autres" value="0" formControlName="timeline">
+                                    <label class="form-check-label" for="flexRadioDefault4">
+                                    Autres
+                                    </label>
+                                </div>
+    
+                           </div>
+
+                        </div>
+
+                         <div class="form-group">
+                            <select  class="form-select" aria-label="Default select example" formControlName="budgettype">
+                                <option  value="" selected>type de budget</option> 
+                                <option  value="fixe" selected>fixe</option> 
+                                <option   value ='non fixe' >non fixe</option>
+                                <!-- <option value="manioc" name="category" >manioc</option>
+                                <option value="aubergine" name="category">aubergine</option> -->
+                            </select>
+                     </div>
+
+               
+
+                        
+                        <div class="form-group">
+                              <label class="form-check-label" for="flexRadioDefault4">
+                                Budget Pour la mission
+                                </label>
+
+                                <div class="input-group mb-3">
+                                    <span class="input-group-text" id="basic-addon1">FCFA</span>
+                                    <input type="number" step="0.01" class="form-control" placeholder="budget" aria-label="Username" aria-describedby="basic-addon1" formControlName="budget">
+                                  </div>
+
+                        </div>
+
+                        <div class="form-group">
+                            <label>Expiration de l'offre</label>
+                            <input type="date" class="form-control floating" id="expirydate" formControlName="expirydate">
+                        </div>
+                        
+                     
+                                <button class="btn btn-primary btn-block btn-lg login-btn" (click)='sendJob()'>Poster</button>
+                         
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

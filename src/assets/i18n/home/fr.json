@@ -1,0 +1,21 @@
+{
+    "banner": {
+        "trusted": "Plus de 2M+ d'utilisateurs nous font confiance",
+        "description": "1er moteur de recherche <span class='orange-text'> de talents d'Afrique francophone</span>",
+        "search": {
+            "title": "Trouvez les talents et les opportunités que vous recherchez",
+            "placeholder": "Entrez les mots clés Ex: Conception web et mobile",
+            "search": "Chercher"
+        }
+    },
+    "freelancers": "Talents",
+    "projects": "Missions",
+    "completed-projects": "Missions terminées",
+    "find-missions": "Trouver une mission",
+    "find-freelancers": "Trouver un talent",
+    "recent-projects": "Nos nouvelles missions",
+    "display-missions": "Nos missions",
+    "subscribe-text": "Abonnez-vous pour obtenir des mises à jour et plus.",
+    "subscribe-button": "Souscrire",
+    "subscribe-placeholder": "Entrer votre email"
+}

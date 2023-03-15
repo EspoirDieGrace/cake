@@ -1,0 +1,320 @@
+<div class="dashboard-sec">
+    <div class="row">
+        <div class="col-md-6 col-lg-4">
+            <div class="dash-widget">
+                <div class="dash-info">
+                    <div class="dash-widget-info">Travaux terminés</div>
+                    <div class="dash-widget-count">30</div>
+                </div>
+                <div class="dash-widget-more">
+                    <a [routerLink]="[]" class="d-flex">Voir les details <i
+                        class="fas fa-arrow-right ms-auto"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+            <div class="dash-widget">
+                <div class="dash-info">
+                    <div class="dash-widget-info">Tâche terminée</div>
+                    <div class="dash-widget-count">5</div>
+                </div>
+                <div class="dash-widget-more">
+                    <a [routerLink]="[]" class="d-flex">Voir les details <i
+                        class="fas fa-arrow-right ms-auto"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+            <div class="dash-widget">
+                <div class="dash-info">
+                    <div class="dash-widget-info">Commentaires</div>
+                    <div class="dash-widget-count">25</div>
+                </div>
+                <div class="dash-widget-more">
+                    <a [routerLink]="[]" class="d-flex">Voir les details <i
+                        class="fas fa-arrow-right ms-auto"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Chart Content -->
+    <div class="row">
+        <div class="col-xl-8 d-flex">
+            <div class="card flex-fill">
+                <div class="pro-head">
+                    <h5 class="card-title mb-0">Vue de votre profil</h5>
+                    <div class="month-detail">
+                        <select class="form-control">
+                            <option value="0">6 derniers mois</option>
+                            <option value="1">2 derniers mois</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="pro-body">
+                    <div id="chartprofile">
+                        <apx-chart
+                            [series]="chartOptions.series"
+                            [chart]="chartOptions.chart"
+                            [xaxis]="chartOptions.xaxis"
+                            [dataLabels]="chartOptions.dataLabels"
+                            [grid]="chartOptions.grid"
+                            [stroke]="chartOptions.stroke"
+                            [title]="chartOptions.title"
+                        ></apx-chart>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-4 d-flex">
+            <div class="flex-fill card">
+                <div class="pro-head b-0">
+                    <h5 class="card-title mb-0">Analyse Statique</h5>
+                </div>
+                <div class="pro-body">
+                    <div id="chartradial">
+                        <apx-chart
+                            [series]="radialchartOptions.series"
+                            [chart]="radialchartOptions.chart"
+                            [plotOptions]="radialchartOptions.plotOptions"
+                            [labels]="radialchartOptions.labels"
+                        ></apx-chart>
+                    </div>
+                    <ul class="static-list">
+                        <li><span><i class="fas fa-circle text-violet me-1"></i> Emplois appliqués</span> <span
+                            class="sta-count">30</span></li>
+                        <li><span><i class="fas fa-circle text-pink me-1"></i>Propositions actives</span> <span
+                            class="sta-count">30</span></li>
+                        <li><span><i class="fas fa-circle text-yellow me-1"></i> Propositions appliquées</span> <span
+                            class="sta-count">30</span></li>
+                        <li><span><i class="fas fa-circle text-blue me-1"></i>Projets favoris</span> <span
+                            class="sta-count">30</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /Chart Content -->
+
+    <div class="row">
+        <!-- Plan  Details-->
+        <div class="col-xl-6 d-flex">
+            <div class="card flex-fill">
+                <div class="pro-head">
+                    <h2>Détails du plan d'ahésion</h2>
+                    <div><i class="fas fa-check-circle verified orange-text fa-2x"></i></div>
+                </div>
+                <div class="pro-body">
+                    <div class="row">
+                        <div class="col-md-6 col-sm-6">
+                            <div class="plan-details">
+                                <h4>L'Utime</h4>
+                                <div class="yr-amt">Prix annuel</div>
+                                <h3>1200 f cfa</h3>
+                                <div class="yr-duration">Duée: 1 an</div>
+                                <div class="expiry">Expiration: 24 Janvier 2022</div>
+                                <a [routerLink]="[]" class="btn btn-primary btn-plan">Changer
+                                    de forfait</a>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-6">
+                            <div class="plan-feature">
+                                <ul>
+                                    <li>12 crédits de projet</li>
+                                    <li>10 Services autorisés</li>
+                                    <li>Visibilité 20 jours</li>
+                                    <li>5 Services en vedette</li>
+                                    <li>Visibilité 20 jours</li>
+                                    <li>Expiration du forfait de 30 jours</li>
+                                    <li>Profil en vedette</li>
+                                </ul>
+                                <a [routerLink]="[]">Voir les details</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /Plan  Details -->
+
+        <!-- Ongoing Projects -->
+        <div class="col-xl-6 d-flex">
+            <div class="card flex-fill">
+                <div class="pro-head">
+                    <h2>Projet en cours</h2>
+                    <a [routerLink]="[]" class="btn fund-btn">Voir tout</a>
+                </div>
+                <div class="pro-body p-0">
+                    <div class="on-project">
+                        <h5>Récupération Web</h5>
+                        <p>J'ai besoin que certaines données soient extraites de divers médias sociaux...</p>
+                        <div class="pro-info">
+                            <ul class="list-details">
+                                <li>
+                                    <div class="slot">
+                                        <p>Type d'emploi</p>
+                                        <h5>Horaire</h5>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="slot">
+                                        <p>Prix du projet</p>
+                                        <h5>12000 f cfa</h5>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="slot">
+                                        <p>Emplacement</p>
+                                        <h5>3 Reçu</h5>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="slot">
+                                        <p>Expiration</p>
+                                        <h5>4 jours restants</h5>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="on-project">
+                        <h5>Nouveau service</h5>
+                        <p>J'ai besoin que certaines données soient extraites de divers médias sociaux...</p>
+                        <div class="pro-info">
+                            <ul class="list-details">
+                                <li>
+                                    <div class="slot">
+                                        <p>Type d'emploi</p>
+                                        <h5>Horaire</h5>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="slot">
+                                        <p>Prix du projet</p>
+                                        <h5>12000 f cfa</h5>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="slot">
+                                        <p>Emplacement</p>
+                                        <h5>3 Reçu</h5>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="slot">
+                                        <p>Expiration</p>
+                                        <h5>Encore 5 jours</h5>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="on-project">
+                        <h5>Modifications de la mise en page du site Web</h5>
+                        <p>J'ai besoin que certaines données soient extraites de divers médias sociaux...</p>
+                        <div class="pro-info">
+                            <ul class="list-details">
+                                <li>
+                                    <div class="slot">
+                                        <p>Type d'emploi</p>
+                                        <h5>Horaire</h5>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="slot">
+                                        <p>Prix du projet</p>
+                                        <h5>12000 f cfa</h5>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="slot">
+                                        <p>Emplacement</p>
+                                        <h5>3 Reçu</h5>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="slot">
+                                        <p>Expiration</p>
+                                        <h5> 7 jours restants</h5>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                   
+                    
+                </div>
+            </div>
+        </div>
+        <!-- /Ongoing Projects -->
+    </div>
+
+    <!-- Past Earnings -->
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card mb-4">
+                <div class="pro-head">
+                    <h2>Gains antérieurs</h2>
+                    <a [routerLink]="[]" class="btn fund-btn">Voir tout</a>
+                </div>
+                <div class="pro-body p-0">
+                    <div class="earn-feature">
+                        <div class="row align-items-center">
+                            <div class="col-lg-7 col-md-6">
+                                <div class="earn-info">
+                                    <p>Je veux une personnalisation et une installation sur wordpress</p>
+                                    <div class="date">5 octobre 2021</div>
+                                </div>
+                            </div>
+                            <div class="col-lg-5 col-md-6">
+                                <div class="earn-img">
+                                    <span><img src="assets/img/user/avatar-1.jpg" alt="logo"
+                                               class="img-fluid avatar-md rounded-circle">Ali Badara</span>
+                                    <div class="price">20.000 fcfa</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="earn-feature">
+                        <div class="row align-items-center">
+                            <div class="col-lg-7 col-md-6">
+                                <div class="earn-info">
+                                    <p>Je veux un développement simple de composants Joomla 4</p>
+                                    <div class="date">12 Octobre 2021</div>
+                                </div>
+                            </div>
+                            <div class="col-lg-5 col-md-6">
+                                <div class="earn-img">
+                                    <span><img src="assets/img/user/avatar-2.jpg" alt="logo"
+                                               class="img-fluid avatar-md rounded-circle">Soumahora abou</span>
+                                    <div class="price">15.000 fcfa</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="earn-feature">
+                        <div class="row align-items-center">
+                            <div class="col-lg-7 col-md-6">
+                                <div class="earn-info">
+                                    <p>Je veux migrer le site Wordpress</p>
+                                    <div class="date">28 octobre 2021</div>
+                                </div>
+                            </div>
+                            <div class="col-lg-5 col-md-6">
+                                <div class="earn-img">
+                                    <span><img src="assets/img/user/avatar-3.jpg" alt="logo"
+                                               class="img-fluid avatar-md rounded-circle"> bomia Ange</span>
+                                    <div class="price">2000 f cfa</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /Past Earnings -->
+</div>

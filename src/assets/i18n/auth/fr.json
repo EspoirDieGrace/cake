@@ -1,0 +1,33 @@
+{
+    "fields": {
+        "email": "Email",
+        "password": "Mot de passe",
+        "firstname": "Prénoms",
+        "lastname": "Nom",
+        "username" : "Pseudo",
+        "country": "Pays",
+        "password-confirmed": "Confirmation du mot de passe"
+    },
+    "login": {
+        "description": "Bienvenue dans la révolution du freelance.",
+        "remember-me": "Rester connecter",
+        "login-button": "Connexion",
+
+        "new-user-text": "Pas de compte ?",
+        "register": "Inscription"
+    },
+    "register": {
+        "join-us": "Nous rejoindre",
+        "freelance-role": "Je propose mes talents",
+        "project-role": "Je cherche des talents",
+        "register": "S'enregistrer"
+    },
+    "social-login": "Ou connecter vous avec",
+    "forgot-password": "Mot de passe oublé ?",
+    "forgot-password-page": {
+        "description": "Mot de passe oublié ?",
+        "sub-description": "D'abord, esseyons de trouver votre compte",
+        "search-button": "Rechercher",
+        "login": "Connexion"
+    }
+}

@@ -1,0 +1,18 @@
+@use "src/variables";
+
+:host {
+    .card-body {
+        dl {
+            dd {
+                display: list-item;
+                list-style-type: none;
+                padding-inline-start: .5vw;
+
+                fa-icon {
+                    color: variables.$primary-color;
+                    margin-right: .2vw;
+                }
+            }
+        }
+    }
+}

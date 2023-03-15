@@ -1,0 +1,23 @@
+<!-- Page Content -->
+<div class="content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-8 offset-md-2">
+
+                <!-- Page Not Found -->
+                <div class="empty-content text-center">
+                    <img src="assets/img/404.png" alt="logo" class="img-fluid">
+                    <h2 [innerHTML]="'not-found.page-not-found' | transloco"></h2>
+                    <p>{{'not-found.text-1' | transloco}}</p>
+                    <p>{{'not-found.text-2' | transloco}}</p>
+                    <div class="btn-item">
+                        <a class="btn get-btn" [routerLink]="RouteName.Base">{{'not-found.go-to-home' | transloco}}</a>
+                        <a class="btn courses-btn" (click)="goBack()">{{'not-found.back' | transloco}}</a>
+                    </div>
+                </div>
+                <!-- / Page Not Found -->
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /Page Content -->

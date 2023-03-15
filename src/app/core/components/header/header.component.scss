@@ -1,0 +1,18 @@
+:host {
+    .header {
+        .logo {
+            img {
+                height: 3.5vh;
+            }
+        }
+    }
+
+    .nav {
+        .reg-btn,
+        .log-btn {
+            i {
+                margin-right: .2rem;
+            }
+        }
+    }
+}

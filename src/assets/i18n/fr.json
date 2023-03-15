@@ -1,0 +1,32 @@
+{
+    "header": {
+        "home": "Accueil",
+        "about-us": "À propos de nous",
+        "contact-us": "Contact",
+        "services": "Services",
+        "register": "Créer un compte",
+        "login": "Se connecter",
+        "post-a-project": "Ajouter un projet",
+        "freelancers": "Trouver un talent",
+        "projects": "Trouver une mission"
+    },
+
+    "footer": {
+        "office-address": "Adresse",
+        "number": "Numéro",
+        "useful-links": "Liens utiles",
+        "about-us": "À propos de nous",
+        "faq": "Faq",
+        "categories": "Catégories",
+        "mobile-app": "Application mobile",
+        "mobile-app-text": "Téléchargez notre application et recevez les dernières alertes de dernière minute."
+    },
+
+    "not-found": {
+        "page-not-found": "Page <span class='orange-text'>non trouvé</span>",
+        "text-1": "Oops! Il semble que vous ayez utilisé un mauvais lien.",
+        "text-2": "Si vous pensez que c'est un problème avec nous, veuillez nous le dire.",
+        "go-to-home": "Accueil",
+        "back": "Retour"
+    }
+}

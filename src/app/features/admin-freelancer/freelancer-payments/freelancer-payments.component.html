@@ -1,0 +1,22 @@
+<nav class="user-tabs mb-4">
+    <ul class="nav nav-tabs nav-tabs-bottom nav-justified">
+        <li class="nav-item">
+            <a class="nav-link"
+               [routerLink]="[RouteName.Base, RouteName.Freelancer, RouteName.Payments, RouteName.Withdraw]"
+               routerLinkActive="active"
+            >
+                Withdraw Funds
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link"
+               [routerLink]="[RouteName.Base, RouteName.Freelancer, RouteName.Payments, RouteName.Transactions]"
+               routerLinkActive="active"
+            >
+                Transaction History
+            </a>
+        </li>
+    </ul>
+</nav>
+
+<router-outlet></router-outlet>

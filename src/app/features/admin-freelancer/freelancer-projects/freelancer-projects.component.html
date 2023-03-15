@@ -1,0 +1,38 @@
+<nav class="user-tabs mb-4">
+    <ul class="nav nav-tabs nav-tabs-bottom nav-justified">
+        <li class="nav-item">
+            <a class="nav-link"
+               [routerLink]="[RouteName.Base, RouteName.Freelancer, RouteName.Projects, RouteName.Proposal]"
+               routerLinkActive="active"
+            >
+                My Proposals
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link"
+               [routerLink]="[RouteName.Base, RouteName.Freelancer, RouteName.Projects, RouteName.Ongoing]"
+               routerLinkActive="active"
+            >
+                Ongoing Projects
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link"
+               [routerLink]="[RouteName.Base, RouteName.Freelancer, RouteName.Projects, RouteName.Completed]"
+               routerLinkActive="active"
+            >
+                Completed Projects
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link"
+               [routerLink]="[RouteName.Base, RouteName.Freelancer, RouteName.Projects, RouteName.Cancelled]"
+               routerLinkActive="active"
+            >
+                Cancelled Projects
+            </a>
+        </li>
+    </ul>
+</nav>
+
+<router-outlet></router-outlet>

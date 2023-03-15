@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "vinoct-48b1d"
+  },
+  "targets": {
+    "vinoct-48b1d": {
+      "hosting": {
+        "vinoct": [
+          "vinoct-48b1d"
+        ]
+      }
+    }
+  }
+}

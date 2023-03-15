@@ -1,0 +1,98 @@
+<!-- Header -->
+<header class="header" id="header">
+    <nav class="navbar navbar-expand-lg header-nav">
+        <div class="navbar-header">
+            <a id="mobile_btn" (click)="openMobileMenu()">
+                <span class="bar-icon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </span>
+            </a>
+            <a [routerLink]="RouteName.Base" class="navbar-brand logo">
+                <img src="../../../../assets/img/logo.png" class="img-fluid" alt="Logo">
+            </a>
+        </div>
+        <div class="main-menu-wrapper">
+            <div class="menu-header">
+                <a [routerLink]="RouteName.Base" class="menu-logo">
+                    <img src="../../../../assets/img/logo.png" class="img-fluid" alt="Logo">
+                </a>
+                <a id="menu_close" class="menu-close" (click)="closeMobileMenu()">
+                    <i class="fas fa-times"></i>
+                </a>
+            </div>
+            <ul class="main-nav">
+                <li
+                    routerLinkActive="active"
+                    [routerLinkActiveOptions]="{ exact: true }"
+                >
+                    <a [routerLink]="RouteName.Base">{{'header.home' | transloco}}</a>
+                </li>
+
+                <li
+                    routerLinkActive="active"
+                >
+                    <a [routerLink]="[RouteName.Base, RouteName.Freelancers]">{{'header.freelancers' | transloco}}</a>
+                </li>
+
+                <li
+                    routerLinkActive="active"
+                >
+                    <a [routerLink]="[RouteName.Base, RouteName.Projects]">{{'header.projects' | transloco}}</a>
+                </li>
+            </ul>
+        </div>
+
+        <ul class="nav header-navbar-rht">
+            <ng-container *ngIf="isLoggedIn">
+                <!-- User Menu -->
+                <li class="nav-item dropdown has-arrow main-drop account-item">
+                    <a href="#" class="dropdown-toggle nav-link" data-bs-toggle="dropdown">
+								<span class="user-img">
+									<img src="../../../../assets/img/img-04.jpg" alt="">
+								</span>
+                        <span *ngIf="role === 'client'">Client</span>
+                        <span *ngIf="role === 'freelancer'">Freelancer</span>
+                    </a>
+
+                    <div class="dropdown-menu emp" *ngIf="role">
+                        <div class="drop-head">Menu</div>
+
+<!--                        <a class="dropdown-item" [routerLink]="['']" *ngIf="role === 'freelancer'">-->
+<!--                            <i class="material-icons">verified_user</i> View profile-->
+<!--                        </a>-->
+
+                        <a class="dropdown-item" [routerLink]="[RouteName.Base, redirectTo, RouteName.Projects]">
+                            <i class="material-icons">business_center</i> Projects
+                        </a>
+
+                        <a class="dropdown-item" [routerLink]="[RouteName.Base, redirectTo, RouteName.Settings]"> <i
+                            class="material-icons">settings</i>
+                            Profile Settings
+                        </a>
+                    </div>
+                </li>
+                <!-- /User Menu -->
+
+                <li *ngIf="role">
+                    <a [routerLink]="[RouteName.Base, redirectTo]" class="login-btn">Dashboard</a>
+                </li>
+            </ng-container>
+
+            <ng-container *ngIf="!isLoggedIn">
+                <li routerLinkActive="active">
+                    <a [routerLink]="[RouteName.Base, RouteName.Auth, RouteName.Register]" class="reg-btn">
+                        <i class="fas fa-user"></i> {{'header.register' | transloco}}
+                    </a>
+                </li>
+
+                <li>
+                    <a [routerLink]="[RouteName.Base, RouteName.Auth, RouteName.Login]"
+                       class="login-btn">{{'header.login' | transloco}}</a>
+                </li>
+            </ng-container>
+        </ul>
+    </nav>
+</header>
+<!-- /Header -->

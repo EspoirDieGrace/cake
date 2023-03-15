@@ -1,0 +1,93 @@
+<!-- Page Content -->
+<div class="content">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+
+                <!-- Login Content -->
+                <div class="account-content">
+                    <div class="align-items-center justify-content-center">
+                        <div class="login-right">
+                            <div class="login-header text-center">
+                                <a [routerLink]="[RouteName.Base]">
+                                    <img src="assets/img/logo.png" alt="logo" class="img-fluid">
+                                </a>
+                                <p>{{'auth.login.description' | transloco}}</p>
+                            </div>
+
+                            <form [formGroup]="appLogin">
+                                <div class="form-group form-focus">
+                                    <input type="text" class="form-control floating" #userName formControlName="email">
+                                    <label class="focus-label">{{'auth.fields.email' | transloco}} (user : client or freelancer)</label>
+                                    <div [hidden]="email.valid || email.untouched">             
+                                        <div [hidden]="!email.hasError('required')" class='text-danger'>
+                                          Vous devez renseigner votre email
+                                        </div>
+                                        <div [hidden]="!email.hasError('pattern')" class='text-danger'>
+                                          Vous email n'est pas valide
+                                        </div> 
+                                    </div>
+                                </div>
+                                <div class="form-group form-focus">
+                                    <input type="password" class="form-control floating" #userPassword formControlName="password">
+                                    <label class="focus-label">{{'auth.fields.password' | transloco}}</label>
+                                    <div [hidden]="password.valid || password.untouched">
+                                          
+                                        <div [hidden]="!password.hasError('minlength')" class='text-danger'>
+                                          votre mot de passe doit avoir au moins 6 caractères
+                                          </div>
+                                        <div [hidden]="!password.hasError('required')" class='text-danger'>
+                                          le mot de passe est requis
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="custom_check">
+                                        <input type="checkbox" name="rem_password">
+                                        <span class="checkmark"></span> {{'auth.login.remember-me' | transloco}}
+                                    </label>
+                                </div>
+                                <button class="btn btn-primary btn-block btn-lg login-btn" (click)="SignIn(userName.value,userPassword.value)">
+                                    <img *ngIf="isLoading" style="width : 44px" src="../../../../assets/img/spinner.gif" />
+
+                                    {{'auth.login.login-button' | transloco}}
+                                </button>
+                                <!-- <div class="login-or">
+                                    <p>{{'auth.social-login' | transloco}}</p>
+                                </div> -->
+                                <!-- <div class="row social-login">
+                                    <div class="col-4">
+                                        <a href="#" class="btn btn-twitter btn-block"> Twitter</a>
+                                    </div>
+                                    <div class="col-4">
+                                        <a href="#" class="btn btn-facebook btn-block"> Facebook</a>
+                                    </div>
+                                    <div class="col-4">
+                                        <a href="#" class="btn btn-google btn-block"> Google</a>
+                                    </div>
+                                </div> -->
+                                <div class="row">
+                                    <div class="col-6 text-start">
+                                        <a class="forgot-link"
+                                           [routerLink]="[RouteName.Base, RouteName.Auth, RouteName.ForgotPassword]">
+                                            {{'auth.forgot-password' | transloco}}
+                                        </a>
+                                    </div>
+                                    <div class="col-6 text-end dont-have">
+                                        {{'auth.login.new-user-text' | transloco}}
+                                        <a [routerLink]="[RouteName.Base, RouteName.Auth, RouteName.Register]">
+                                            {{'auth.login.register' | transloco}}
+                                        </a>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <!-- /Login Content -->
+
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /Page Content -->

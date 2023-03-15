@@ -1,0 +1,546 @@
+<!-- Breadcrumb -->
+<div class="breadcrumb-bar">
+    <div class="container">
+        <div class="row align-items-center inner-banner">
+            <div class="col-md-12 col-12 text-center">
+                <h2 class="breadcrumb-title">Recherche de talents</h2>
+                <nav aria-label="breadcrumb" class="page-breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a [routerLink]="RouteName.Base">Accueil</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Talents</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /Breadcrumb -->
+
+
+<!-- Page Content -->
+<div class="content">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 col-lg-4 col-xl-3 theiaStickySidebar">
+
+                <!-- Search Filter -->
+                <div class="card search-filter">
+                    <div class="card-header d-flex justify-content-between">
+                        <h4 class="card-title mb-0">FILTRE</h4>
+                        <a href="javascript:void(0);">Tout effacer</a>
+                    </div>
+                    <div class="card-body">
+                        <div class="filter-widget">
+                            <h4>Mot clés</h4>
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Entrez des mots-clés">
+                            </div>
+                        </div>
+                        <div class="filter-widget">
+                            <h4>Emplacement</h4>
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Entez l'emplacement">
+                            </div>
+                        </div>
+                        <div class="filter-widget">
+                            <h4>Catégorie</h4>
+                            <div class="form-group">
+                                <ng-select2 width="100%" class="select">
+                                    <option>Choisir une catégorie</option>
+                                    <option>Dévelopeur</option>
+                                    <option>Développeur d'interface utilisateur</option>
+                                    <option>Dévelopeur React</option>
+                                    <option>Developeur .Net</option>
+                                </ng-select2>
+                            </div>
+                        </div>
+                        <div class="filter-widget">
+                            <h4>Projets achevés</h4>
+                            <div class="form-group">
+                                <ng-select2 width="100%" class="select">
+                                    <option>Selectionnez des Projets</option>
+                                    <option>Projets Node</option>
+                                    <option>Projets d'interface utilisateur</option>
+                                </ng-select2>
+                            </div>
+                        </div>
+                        <div class="filter-widget">
+                            <h4>Type de tarification</h4>
+                            <div class="form-group">
+                                <ng-select2 width="100%" class="select">
+                                    <option>Taux horaire</option>
+                                    <option>Tarif journée complète</option>
+                                    <option>Tarif demi-journée</option>
+                                </ng-select2>
+                            </div>
+                        </div>
+                        <div class="filter-widget">
+                            <h4>Ajouter des compétences</h4>
+                            <div class="form-group">
+                                <span class="badge badge-pill badge-skill">+ Conception Web</span><span
+                                class="badge badge-pill badge-skill">+ Conception d'interface utilisateur</span><span
+                                class="badge badge-pill badge-skill">+ Node Js</span><span
+                                class="badge badge-pill badge-skill">+ Angular</span><span
+                                class="badge badge-pill badge-skill">+ Wordpress</span>
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>
+                        <div class="filter-widget">
+                            <h4>Disponibilité</h4>
+                            <div>
+                                <label class="custom_check">
+                                    <input type="checkbox" name="select_time" checked>
+                                    <span class="checkmark"></span> Horaire
+                                </label>
+                            </div>
+                            <div>
+                                <label class="custom_check">
+                                    <input type="checkbox" name="select_time">
+                                    <span class="checkmark"></span> A temps partiel
+                                </label>
+                            </div>
+                            <div>
+                                <label class="custom_check">
+                                    <input type="checkbox" name="select_time">
+                                    <span class="checkmark"></span> A plein temps
+                                </label>
+                            </div>
+                        </div>
+                        <div class="filter-widget">
+                            <h4>Experience</h4>
+                            <div>
+                                <label class="custom_check">
+                                    <input type="checkbox" name="select_specialist">
+                                    <span class="checkmark"></span> 0-1 ans
+                                </label>
+                            </div>
+                            <div>
+                                <label class="custom_check">
+                                    <input type="checkbox" name="select_exp" checked>
+                                    <span class="checkmark"></span> 2-5 ans
+                                </label>
+                            </div>
+                            <div>
+                                <label class="custom_check">
+                                    <input type="checkbox" name="select_exp">
+                                    <span class="checkmark"></span> 5-8 ans
+                                </label>
+                            </div>
+                            <div>
+                                <label class="custom_check">
+                                    <input type="checkbox" name="select_exp">
+                                    <span class="checkmark"></span> 9-12 ans
+                                </label>
+                            </div>
+                            <div>
+                                <label class="custom_check">
+                                    <input type="checkbox" name="select_exp">
+                                    <span class="checkmark"></span> Maîtrise 
+                                </label>
+                            </div>
+                            <div>
+                                <label class="custom_check">
+                                    <input type="checkbox" name="select_exp">
+                                    <span class="checkmark"></span> Professionelle
+                                </label>
+                            </div>
+                        </div>
+                        <div class="filter-widget">
+                            <h4>Taux horaire</h4>
+                            <div id="slider-range"></div>
+                            <div class="row slider-labels">
+                                <div class="col-xs-12 caption">
+                                    <span id="slider-range-value1"></span> - <span id="slider-range-value2"></span>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <form>
+                                        <input type="hidden" name="min-value" value="">
+                                        <input type="hidden" name="max-value" value="">
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="filter-widget">
+                            <h4>Devise</h4>
+                            <div class="form-group">
+                                <ng-select2 width="100%" class="select">
+                                    <option>USD</option>
+                                    <option>Euro</option>
+                                </ng-select2>
+                            </div>
+                        </div>
+                        <div class="filter-widget">
+                            <h4>Type de profil</h4>
+                            <div class="form-group">
+                                <ng-select2 width="100%" class="select">
+                                    <option>Individuel</option>
+                                    <option>Individuel</option>
+                                    <option>Individuel</option>
+                                </ng-select2>
+                            </div>
+                        </div>
+                        <div class="filter-widget">
+                            <h4>Commentaires</h4>
+                            <div>
+                                <label class="custom_check">
+                                    <input type="checkbox" name="pro_ratings">
+                                    <span class="checkmark"></span>
+                                    <span class="rating">
+                                    <i class="fas fa-star filled"></i>
+                                    <i class="fas fa-star filled"></i>
+                                    <i class="fas fa-star filled"></i>
+                                    <i class="fas fa-star filled"></i>
+                                    <i class="fas fa-star filled"></i>
+                                    <span class="average-rating">(5)</span>
+                                </span>
+                                </label>
+                            </div>
+                            <div>
+                                <label class="custom_check">
+                                    <input type="checkbox" name="pro_ratings">
+                                    <span class="checkmark"></span>
+                                    <span class="rating">
+                                    <i class="fas fa-star filled"></i>
+                                    <i class="fas fa-star filled"></i>
+                                    <i class="fas fa-star filled"></i>
+                                    <i class="fas fa-star filled"></i>
+                                    <i class="far fa-star"></i>
+                                    <span class="average-rating">(4)</span>
+                                </span>
+                                </label>
+                            </div>
+                            <div>
+                                <label class="custom_check">
+                                    <input type="checkbox" name="pro_ratings">
+                                    <span class="checkmark"></span>
+                                    <span class="rating">
+                                    <i class="fas fa-star filled"></i>
+                                    <i class="fas fa-star filled"></i>
+                                    <i class="fas fa-star filled"></i>
+                                    <i class="far fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    <span class="average-rating">(6)</span>
+                                </span>
+                                </label>
+                            </div>
+                            <div>
+                                <label class="custom_check">
+                                    <input type="checkbox" name="pro_ratings">
+                                    <span class="checkmark"></span>
+                                    <span class="rating">
+                                    <i class="fas fa-star filled"></i>
+                                    <i class="fas fa-star filled"></i>
+                                    <i class="far fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    <span class="average-rating">(7)</span>
+                                </span>
+                                </label>
+                            </div>
+                            <div>
+                                <label class="custom_check">
+                                    <input type="checkbox" name="pro_ratings">
+                                    <span class="checkmark"></span>
+                                    <span class="rating">
+                                    <i class="fas fa-star filled"></i>
+                                    <i class="far fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    <span class="average-rating">(8)</span>
+                                </span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="btn-search">
+                            <button type="button" class="btn btn-block">Chercher</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- /Search Filter -->
+
+            </div>
+
+            <div class="col-md-12 col-lg-8 col-xl-9">
+                <div class="sort-tab">
+                    <div class="row align-items-center">
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
+                            <div class="d-flex align-items-center">
+                                <div class="freelance-view">
+                                    <h4>Affichage 1 - 12 sur 455</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
+                            <div class="d-flex justify-content-sm-end">
+                                <div class="sort-by">
+                                    <select class="custom-select form-select">
+                                        <option>Pertinence</option>
+                                        <option>Evaluation</option>
+                                        <option>Populaire</option>
+                                        <option>Dernier</option>
+                                        <option>Libre</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bootstrap-tags text-start pl-0">
+                    <span class="badge badge-pill badge-skills">Dévelopeur UI/UX <span class="tag-close"
+                                                                                      data-role="remove"><i
+                        class="fas fa-times"></i></span></span>
+                    <span class="badge badge-pill badge-skills">Allemagne <span class="tag-close" data-role="remove"><i
+                        class="fas fa-times"></i></span></span>
+                    <span class="badge badge-pill badge-skills">Horaire <span class="tag-close" data-role="remove"><i
+                        class="fas fa-times"></i></span></span>
+                    <span class="badge badge-pill badge-skills">0-1 ans <span class="tag-close" data-role="remove"><i
+                        class="fas fa-times"></i></span></span>
+                    <span class="badge badge-pill badge-skills">USD <span class="tag-close" data-role="remove"><i
+                        class="fas fa-times"></i></span></span>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6 col-lg-6 col-xl-4">
+                        <div class="freelance-widget">
+                            <div class="freelance-content">
+                                <a data-bs-toggle="modal" href="#rating" class="favourite"><i
+                                    class="fas fa-star"></i></a>
+                                <div class="freelance-img">
+                                    <a href="#">
+                                        <img src="assets/img/user/avatar-1.jpg" alt="User Image">
+                                        <span class="verified"><i class="fas fa-check-circle"></i></span>
+                                    </a>
+                                </div>
+                                <div class="freelance-info">
+                                    <h3><a href="#">George Aboma</a></h3>
+                                    <div class="freelance-specific">Concepteur UI/UX</div>
+                                    <div class="freelance-location"><i class="fas fa-map-marker-alt me-1"></i>Abidjan,
+                                        Côte d'Ivoire
+                                    </div>
+                                    <div class="rating">
+                                        <i class="fas fa-star filled"></i>
+                                        <i class="fas fa-star filled"></i>
+                                        <i class="fas fa-star filled"></i>
+                                        <i class="fas fa-star filled"></i>
+                                        <i class="fas fa-star"></i>
+                                        <span class="average-rating">4.7 (32)</span>
+                                    </div>
+                                    <div class="freelance-tags">
+                                        <a href="javascript:void(0);"><span class="badge badge-pill badge-design">Création de sites Web</span></a>
+                                        <a href="javascript:void(0);"><span class="badge badge-pill badge-design">Conception d'interface utilisateur</span></a>
+                                        <a href="javascript:void(0);"><span class="badge badge-pill badge-design">Node Js</span></a>
+                                    </div>
+                                    <div class="freelancers-price">2000 fcfa / Heure</div>
+                                </div>
+                            </div>
+                            <div class="cart-hover">
+                                <a [routerLink]="[RouteName.Base, RouteName.Freelancers, RouteName.Details]" class="btn-cart" tabindex="-1">Voir le profil</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-6 col-xl-4">
+                        <div class="freelance-widget">
+                            <div class="freelance-content">
+                                <a data-bs-toggle="modal" href="#rating" class="favourite favourited"><i
+                                    class="fas fa-star"></i></a>
+                                <div class="freelance-img">
+                                    <a href="#">
+                                        <img src="assets/img/user/avatar-2.jpg" alt="User Image">
+                                        <span class="verified"><i class="fas fa-check-circle"></i></span>
+                                    </a>
+                                </div>
+                                <div class="freelance-info">
+                                    <h3><a href="#">Timothé Loba</a></h3>
+                                    <div class="freelance-specific">Dévelopeur PHP</div>
+                                    <div class="freelance-location"><i class="fas fa-map-marker-alt me-1"></i>Yamoussoukro,
+                                        Côte d'Ivoire
+                                    </div>
+                                    <div class="rating">
+                                        <i class="fas fa-star filled"></i>
+                                        <i class="fas fa-star filled"></i>
+                                        <i class="fas fa-star filled"></i>
+                                        <i class="fas fa-star filled"></i>
+                                        <i class="fas fa-star"></i>
+                                        <span class="average-rating">4.8 (55)</span>
+                                    </div>
+                                    <div class="freelance-tags">
+                                        <a href="javascript:void(0);"><span class="badge badge-pill badge-design">Creation de sites Web</span></a>
+                                        <a href="javascript:void(0);"><span class="badge badge-pill badge-design">Conception d'interface utilisateur</span></a>
+                                        <a href="javascript:void(0);"><span class="badge badge-pill badge-design">Node Js</span></a>
+                                    </div>
+                                    <div class="freelancers-price">10.000 f cfa / Heure</div>
+                                </div>
+                            </div>
+                            <div class="cart-hover">
+                                <a [routerLink]="[RouteName.Base, RouteName.Freelancers, RouteName.Details]" class="btn-cart" tabindex="-1">Voir le profil</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-6 col-xl-4">
+                        <div class="freelance-widget">
+                            <div class="freelance-content">
+                                <a data-bs-toggle="modal" href="#rating" class="favourite favourited"><i
+                                    class="fas fa-star"></i></a>
+                                <div class="freelance-img">
+                                    <a href="#">
+                                        <img src="assets/img/user/avatar-2.jpg" alt="User Image">
+                                        <span class="verified"><i class="fas fa-check-circle"></i></span>
+                                    </a>
+                                </div>
+                                <div class="freelance-info">
+                                    <h3><a href="#">Louis Aboma</a></h3>
+                                    <div class="freelance-specific">Dévelopeur Angular</div>
+                                    <div class="freelance-location"><i class="fas fa-map-marker-alt me-1"></i>Lagos,
+                                        Nigeria
+                                    </div>
+                                    <div class="rating">
+                                        <i class="fas fa-star filled"></i>
+                                        <i class="fas fa-star filled"></i>
+                                        <i class="fas fa-star filled"></i>
+                                        <i class="fas fa-star filled"></i>
+                                        <i class="fas fa-star"></i>
+                                        <span class="average-rating">4.8 (55)</span>
+                                    </div>
+                                    <div class="freelance-tags">
+                                        <a href="javascript:void(0);"><span class="badge badge-pill badge-design">Creation de sites Web</span></a>
+                                        <a href="javascript:void(0);"><span class="badge badge-pill badge-design">Conception d'interface utilisateur</span></a>
+                                        <a href="javascript:void(0);"><span class="badge badge-pill badge-design">PHP</span></a>
+                                    </div>
+                                    <div class="freelancers-price">15.000 f cfa / Heure</div>
+                                </div>
+                            </div>
+                            <div class="cart-hover">
+                                <a [routerLink]="[RouteName.Base, RouteName.Freelancers, RouteName.Details]" class="btn-cart" tabindex="-1">Voir le profil</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-6 col-xl-4">
+                        <div class="freelance-widget">
+                            <div class="freelance-content">
+                                <a data-bs-toggle="modal" href="#rating" class="favourite"><i
+                                    class="fas fa-star"></i></a>
+                                <div class="freelance-img">
+                                    <a href="#">
+                                        <img src="assets/img/user/avatar-1.jpg" alt="User Image">
+                                        <span class="verified"><i class="fas fa-check-circle"></i></span>
+                                    </a>
+                                </div>
+                                <div class="freelance-info">
+                                    <h3><a href="#">Francis Bekoin</a></h3>
+                                    <div class="freelance-specific">Concepteur UI/UX</div>
+                                    <div class="freelance-location"><i class="fas fa-map-marker-alt me-1"></i>Abidjan,
+                                        Côte d'Ivoire
+                                    </div>
+                                    <div class="rating">
+                                        <i class="fas fa-star filled"></i>
+                                        <i class="fas fa-star filled"></i>
+                                        <i class="fas fa-star filled"></i>
+                                        <i class="fas fa-star filled"></i>
+                                        <i class="fas fa-star"></i>
+                                        <span class="average-rating">4.7 (32)</span>
+                                    </div>
+                                    <div class="freelance-tags">
+                                        <a href="javascript:void(0);"><span class="badge badge-pill badge-design">Création de sites Web</span></a>
+                                        <a href="javascript:void(0);"><span class="badge badge-pill badge-design">Conception d'interface utilisateur</span></a>
+                                        <a href="javascript:void(0);"><span class="badge badge-pill badge-design">Node Js</span></a>
+                                    </div>
+                                    <div class="freelancers-price">6000 fcfa / Heure</div>
+                                </div>
+                            </div>
+                            <div class="cart-hover">
+                                <a [routerLink]="[RouteName.Base, RouteName.Freelancers, RouteName.Details]" class="btn-cart" tabindex="-1">Voir le profil</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-6 col-xl-4">
+                        <div class="freelance-widget">
+                            <div class="freelance-content">
+                                <a data-bs-toggle="modal" href="#rating" class="favourite favourited"><i
+                                    class="fas fa-star"></i></a>
+                                <div class="freelance-img">
+                                    <a href="#">
+                                        <img src="assets/img/user/avatar-2.jpg" alt="User Image">
+                                        <span class="verified"><i class="fas fa-check-circle"></i></span>
+                                    </a>
+                                </div>
+                                <div class="freelance-info">
+                                    <h3><a href="#">Konan Claver</a></h3>
+                                    <div class="freelance-specific">Project Manager</div>
+                                    <div class="freelance-location"><i class="fas fa-map-marker-alt me-1"></i>Yamoussoukro,
+                                        Côte d'Ivoire
+                                    </div>
+                                    <div class="rating">
+                                        <i class="fas fa-star filled"></i>
+                                        <i class="fas fa-star filled"></i>
+                                        <i class="fas fa-star filled"></i>
+                                        <i class="fas fa-star filled"></i>
+                                        <i class="fas fa-star"></i>
+                                        <span class="average-rating">4.8 (55)</span>
+                                    </div>
+                                    <div class="freelance-tags">
+                                        <a href="javascript:void(0);"><span class="badge badge-pill badge-design">Creation de sites Web</span></a>
+                                        <a href="javascript:void(0);"><span class="badge badge-pill badge-design">Conception d'interface utilisateur</span></a>
+                                        <a href="javascript:void(0);"><span class="badge badge-pill badge-design">Node Js</span></a>
+                                    </div>
+                                    <div class="freelancers-price">20.000 f cfa / Heure</div>
+                                </div>
+                            </div>
+                            <div class="cart-hover">
+                                <a [routerLink]="[RouteName.Base, RouteName.Freelancers, RouteName.Details]" class="btn-cart" tabindex="-1">Voir le profil</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-6 col-xl-4">
+                        <div class="freelance-widget">
+                            <div class="freelance-content">
+                                <a data-bs-toggle="modal" href="#rating" class="favourite favourited"><i
+                                    class="fas fa-star"></i></a>
+                                <div class="freelance-img">
+                                    <a href="#">
+                                        <img src="assets/img/user/avatar-2.jpg" alt="User Image">
+                                        <span class="verified"><i class="fas fa-check-circle"></i></span>
+                                    </a>
+                                </div>
+                                <div class="freelance-info">
+                                    <h3><a href="#">Kone Silla</a></h3>
+                                    <div class="freelance-specific">Dévelopeur Java</div>
+                                    <div class="freelance-location"><i class="fas fa-map-marker-alt me-1"></i>Bamako,
+                                        Mali
+                                    </div>
+                                    <div class="rating">
+                                        <i class="fas fa-star filled"></i>
+                                        <i class="fas fa-star filled"></i>
+                                        <i class="fas fa-star filled"></i>
+                                        <i class="fas fa-star filled"></i>
+                                        <i class="fas fa-star"></i>
+                                        <span class="average-rating">4.8 (55)</span>
+                                    </div>
+                                    <div class="freelance-tags">
+                                        <a href="javascript:void(0);"><span class="badge badge-pill badge-design">Creation de sites Web</span></a>
+                                        <a href="javascript:void(0);"><span class="badge badge-pill badge-design">Conception d'interface utilisateur</span></a>
+                                        <a href="javascript:void(0);"><span class="badge badge-pill badge-design">Angular</span></a>
+                                    </div>
+                                    <div class="freelancers-price">5.000 f cfa / Heure</div>
+                                </div>
+                            </div>
+                            <div class="cart-hover">
+                                <a [routerLink]="[RouteName.Base, RouteName.Freelancers, RouteName.Details]" class="btn-cart" tabindex="-1">Voir le profil</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+
+                </div>
+
+
+            </div>
+
+        </div>
+    </div>
+
+</div>
+<!-- /Page Content -->
